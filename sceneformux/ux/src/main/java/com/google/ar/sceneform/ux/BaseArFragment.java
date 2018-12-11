@@ -109,8 +109,7 @@ public abstract class BaseArFragment extends Fragment
   @Nullable private OnTapArPlaneListener onTapArPlaneListener;
 
   @SuppressWarnings({"initialization"})
-  private final OnWindowFocusChangeListener onFocusListener =
-      (hasFocus -> onWindowFocusChanged(hasFocus));
+  private final OnWindowFocusChangeListener onFocusListener = this::onWindowFocusChanged;
 
   /** Gets the ArSceneView for this fragment. */
   public ArSceneView getArSceneView() {
@@ -581,3 +580,4 @@ public abstract class BaseArFragment extends Fragment
     }
   }
 }
+
